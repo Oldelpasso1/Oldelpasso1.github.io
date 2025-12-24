@@ -1,0 +1,20 @@
+<aside class="sidebar">
+  <div class="search-box">
+    <input id="search-input" placeholder="Recherche (titre/contenu)..." aria-label="Recherche">
+    <div id="search-results"></div>
+  </div>
+
+  <section class="about">
+    <h3>À propos</h3>
+    <p>Petites notes — mathématiques, réflexions, etc.</p>
+  </section>
+
+  <section class="archives">
+    <h3>Derniers billets</h3>
+    <ul>
+      {% for post in site.posts limit:8 %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+</aside>

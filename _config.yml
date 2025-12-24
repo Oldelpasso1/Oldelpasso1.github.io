@@ -1,0 +1,11 @@
+title: "Mon blog"
+email: ""
+description: "Libres pensées — Blog personnel"
+baseurl: "" # laisser vide si repo username.github.io
+url: "https://USERNAME.github.io" # remplacer USERNAME
+markdown: kramdown
+theme: "" # aucun thème Jekyll, on utilise nos layouts personnalisés
+plugins: [] # pas de plugins => compatible GitHub Pages
+paginate: 10
+highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title.html

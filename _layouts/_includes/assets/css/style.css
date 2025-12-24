@@ -1,0 +1,48 @@
+:root{
+  --max-width: 1000px;
+  --accent: #1a1a1a;
+  --muted: #666;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: Georgia, "Times New Roman", serif;
+  color:#111;
+  margin:0;
+  line-height:1.6;
+  background: #fff;
+}
+
+.inner{max-width:var(--max-width);margin:0 auto;padding:0 16px}
+
+.site-header{border-bottom:1px solid #eee;background:#fafafa}
+.site-header .inner{display:flex;align-items:center;justify-content:space-between;padding:18px 16px}
+.site-title a{color:var(--accent);text-decoration:none}
+.main-nav a{margin-left:12px;color:var(--muted);text-decoration:none}
+.mobile-menu{display:none}
+
+/* layout */
+.container{display:flex;gap:28px;max-width:var(--max-width);margin:20px auto;padding:0 16px}
+.content{flex:1;min-width:0}
+.sidebar{width:300px;flex-shrink:0}
+
+/* posts */
+.post-title{font-size:28px;margin-bottom:6px}
+.post-meta{color:var(--muted);font-size:0.9rem;margin-bottom:18px}
+.post-content{font-size:18px}
+.post-content img{max-width:100%}
+
+/* summary */
+.post-summary{margin-bottom:28px;border-bottom:1px dashed #eee;padding-bottom:12px}
+
+/* search box */
+.search-box input{width:100%;padding:8px;border:1px solid #ddd;border-radius:4px;margin-bottom:8px}
+#search-results{max-height:260px;overflow:auto}
+
+/* responsive */
+@media(max-width:880px){
+  .container{flex-direction:column}
+  .sidebar{width:auto}
+  .mobile-menu{display:inline-block}
+  .main-nav{display:none}
+}
